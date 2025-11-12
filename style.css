@@ -1,0 +1,12 @@
+body {
+  background-color: #252525;
+}
+
+.block {
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  position: absolute;
+  opacity: 0.7;
+}
