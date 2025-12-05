@@ -1,6 +1,5 @@
 import { newCounterInc } from "./utils.js";
 
-const buttonEls = document.querySelectorAll(".button");
 const block = document.querySelector(".block");
 const containerButtons = document.querySelector(".containerButtons");
 
@@ -37,5 +36,4 @@ document.addEventListener("mousemove", function (e) {
   }, 50);
 });
 
-mouseActions.addButton();
 mouseActions.addButton();
