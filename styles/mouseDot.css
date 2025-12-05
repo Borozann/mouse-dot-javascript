@@ -1,0 +1,21 @@
+.block {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  position: absolute;
+  opacity: 0.7;
+  cursor: none !important;
+}
+
+.mouseHover {
+  border: 1px solid black;
+  height: 80px;
+  width: 80px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  transition: opacity var(--mouseHover-transition),
+    border var(--mouseHover-transition), height var(--mouseHover-transition),
+    width var(--mouseHover-transition);
+}
