@@ -5,7 +5,7 @@ const block = document.querySelector(".block");
 const containerButtons = document.querySelector(".containerButtons");
 
 const mouseActions = {
-  counter: newCounterInc(6),
+  btnCounter: newCounterInc(6),
 
   toggleMouseHover() {
     block.classList.toggle("mouseHover");
@@ -14,9 +14,19 @@ const mouseActions = {
   addButton() {
     const html = `<input type="button" value="Button" class="button" />`;
 
-    if (this.counter(1) !== -1) {
+    if (this.btnCounter(1) !== -1) {
       containerButtons.insertAdjacentHTML("afterbegin", html);
     }
+
+    const newBtn = containerButtons.querySelector(".button");
+
+    newBtn.addEventListener("mouseover", function () {
+      mouseActions.toggleMouseHover();
+    });
+
+    newBtn.addEventListener("mouseout", function () {
+      mouseActions.toggleMouseHover();
+    });
   },
 };
 
@@ -27,14 +37,5 @@ document.addEventListener("mousemove", function (e) {
   }, 50);
 });
 
-for (let btn of buttonEls) {
-  btn.addEventListener("mouseover", function () {
-    mouseActions.toggleMouseHover();
-  });
-
-  btn.addEventListener("mouseout", function () {
-    mouseActions.toggleMouseHover();
-  });
-}
-
+mouseActions.addButton();
 mouseActions.addButton();
